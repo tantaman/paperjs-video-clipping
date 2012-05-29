@@ -1,0 +1,15 @@
+canvas {
+	position: absolute;
+	-webkit-filter: saturate(200%) sepia(100%);
+}
+
+body {
+	background: white;
+}
+
+.wrapper {
+	position: relative;
+	width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+}
