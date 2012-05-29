@@ -39,10 +39,12 @@ n.getUserMedia_ = n.getUserMedia ||
                     n.mozGetUserMedia || 
                     n.msGetUserMedia;
 
-if (n.getUserMedia) {
-    n.getUserMedia({video: true, audio: false}, onSuccess, onError);
-} else if (n.getUserMedia_) {
-    n.webkitGetUserMedia('video', onSuccess, onError);
+if (n.getUserMedia_) {
+    try {
+        n.getUserMedia_({video: true, audio: false}, onSuccess, onError);
+    } catch (e) {
+        n.webkitGetUserMedia('video', onSuccess, onError);
+    }
 } else {
     onSuccess(null);
 }
