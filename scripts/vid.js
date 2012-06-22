@@ -15,7 +15,7 @@ function onSuccess(stream) {
             source = stream;
         }
     } else {
-        source = "http://tantaman.com/webrtc/res/media/vid.webm";
+        source = "http://tantaman.github.com/paperjs-video-clipping/res/media/vid.webm";
     }
 
     video.src = source;
