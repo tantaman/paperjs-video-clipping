@@ -30,8 +30,10 @@ function onSuccess(stream) {
     console.log(video.height);
 }
 
-function onError() {
-    console.log("Error getting video");
+function onError(e) {
+    console.log("Error getting video cam");
+    console.log(arguments);
+    onSuccess(null);
 }
 
 n.getUserMedia_ = n.getUserMedia || 
